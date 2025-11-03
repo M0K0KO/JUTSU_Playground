@@ -919,7 +919,11 @@ MonoBehaviour:
   noContext: 1
   singleSegment: 0
   enableTokens: 0
-  initialPrompt: 
+  initialPrompt: 'You should listen for commands of the following list separated
+    by commas.
+
+    Kon, Domain Expansion Infinite Void, Fireball Jutsu, Bang, Repulsor
+    Beam.'
   stepSec: 3
   keepSec: 0.2
   lengthSec: 10
