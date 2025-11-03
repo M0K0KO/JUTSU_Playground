@@ -9,9 +9,9 @@ using UnityEngine.Rendering;
 
 namespace Mediapipe.Unity.HandWorldLandmarkDetection
 {
-    public class HandWorldWorldLandmarkerRunner : HandWorldLandmarkVisionTaskApiRunner<HandLandmarker>
+    public class HandWorldLandmarkerRunner : HandWorldLandmarkVisionTaskApiRunner<HandLandmarker>
     {
-        [SerializeField] private HandWorldLandmarkDrawer drawer;
+        [SerializeField] private HandWorldLandmarkProcesser processer;
         
         private Experimental.TextureFramePool _textureFramePool;
 
@@ -104,7 +104,7 @@ namespace Mediapipe.Unity.HandWorldLandmarkDetection
         
         private void OnHandWorldLandmarkDetectionOutput(HandLandmarkerResult result, Image image, long timestamp)
         {
-            drawer.DrawLater(result);
+            processer.DrawLater(result);
             
             //Debug.Log($"OnHandWorldLandmarkDetectionOutput: {result}");
         }
